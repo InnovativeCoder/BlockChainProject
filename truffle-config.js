@@ -4,8 +4,6 @@ const HDWalletProved = require("@truffle/hdwallet-provider");
 const AccountIndex = 0;
 
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // to customize your Truffle configuration!
   contracts_build_directory: path.join(__dirname, "client/src/contracts"),
   networks: {
     development: {
@@ -27,7 +25,7 @@ module.exports = {
       provider: function () {
         return new HDWalletProved(
           process.env.MNEMONIC,
-          "https://goerli.infura.io/v3/9d9afa367ef14c21b67d961865e4b40e",
+          "https://goerli.infura.io/v3/430c002f434b49658729302d56dab792",
           AccountIndex
         );
       },
@@ -37,7 +35,7 @@ module.exports = {
       provider: function () {
         return new HDWalletProved(
           process.env.MNEMONIC,
-          "https://ropsten.infura.io/v3/9d9afa367ef14c21b67d961865e4b40e",
+          "https://ropsten.infura.io/v3/430c002f434b49658729302d56dab792",
           AccountIndex
         );
       },
